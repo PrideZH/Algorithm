@@ -31,18 +31,19 @@ void add(PNODE head, double value)
 
 void add(PNODE head, int index, double value)
 {
+	if (index < 0 || index > size(head))
+		return;
+
 	PNODE p = head;
-	for (int i = 0; p->next != NULL; ++i, p = p->next)
-		if (i == index)
-		{
-			// 初始化节点
-			PNODE node = (PNODE)malloc(sizeof(NODE));
-			node->value = value;
-			// 插入
-			node->next = p->next;
-			p->next = node;
-			return;
-		}
+	for (int i = 0; i < index; ++i)
+		p = p->next;
+
+	// 初始化节点
+	PNODE node = (PNODE)malloc(sizeof(NODE));
+	node->value = value;
+	// 插入
+	node->next = p->next;
+	p->next = node;
 }
 
 double get(PNODE head, int index)
@@ -133,6 +134,8 @@ PNODE clone(PNODE head)
 
 void print(PNODE head)
 {
+	if (isEmpty(head))
+		return;
 	cout << "[";
 	for (PNODE p = head; p->next != NULL; p = p->next)
 		cout << p->next->value << ((p->next->next == NULL) ? "]" : ",");
