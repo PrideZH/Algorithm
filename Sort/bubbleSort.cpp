@@ -22,9 +22,16 @@ void print(int* array, int size)
 void bubble_sort(int* array, int size)
 {
 	for (int i = 0; i < size - 1; ++i)
+	{
+		bool isSwap = false;
 		for (int j = 0; j < size - i - 1; ++j)
 			if (array[j] > array[j + 1])
+			{
 				swap(array[j], array[j + 1]);
+				isSwap = true;
+			}
+		if (!isSwap) break;
+	}
 }
 
 int main()
@@ -44,6 +51,8 @@ int main()
 
 	// 打印数组
 	print(array, size);
+
+	system("pause");
 	
 	return 0;
 }
