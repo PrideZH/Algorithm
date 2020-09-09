@@ -24,3 +24,6 @@
 2. 取值在一定范围内。（当O(k)>O(n*log(n))时其效率不如基于比较的排序）
 3. 取值比较集中。（不然浪费空间）
 
+## 桶排序 bucketSort
+
+![bucketSort](bucketSort.gif)
