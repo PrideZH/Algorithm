@@ -4,6 +4,12 @@
 
 ![bubbleSort](bubbleSort.gif)
 
+## 快速排序 quickSort
+
+![quickSort](quickSort.gif)
+
+时间复杂度为O(nlog2n)，空间复杂度为O(log2n)。
+
 # 非比较排序
 
 ## 计数排序 countingSort
