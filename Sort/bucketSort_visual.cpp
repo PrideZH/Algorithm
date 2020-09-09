@@ -90,7 +90,10 @@ void bucket_sort(int *array, int size)
 	int array_i = 0;
 	for (int bucket_i = 0; bucket_i < NUM; ++bucket_i)
 		for (int i = 0; i < buckets[bucket_i].size(); ++i)
+		{
+			show(array, size, array_i);
 			array[array_i++] = buckets[bucket_i][i];
+		}
 	show(array, size);
 
 	// Í°ÄÚÅÅÐò
@@ -114,7 +117,7 @@ int main()
 	initgraph(SCREEN_SIZE, SCREEN_SIZE);
 	setlinecolor(BLACK);
 	show(array, SIZE);
-
+	Sleep(8000);
 	// ÅÅÐò
 	bucket_sort(array, SIZE);
 
