@@ -1,10 +1,12 @@
 # 比较排序
 
-## 冒泡排序 bubbleSort
+## 交换排序
+
+### 冒泡排序 bubbleSort
 
 ![bubbleSort](bubbleSort.gif)
 
-## 快速排序 quickSort
+### 快速排序 quickSort
 
 ![quickSort](quickSort.gif)
 
