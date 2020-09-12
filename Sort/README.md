@@ -12,6 +12,12 @@
 
 时间复杂度为O(nlog2n)，空间复杂度为O(log2n)。
 
+## 选择排序
+
+### 简单选择排序
+
+![selectionSort](selectionSort.gif)
+
 # 非比较排序
 
 ## 计数排序 countingSort
